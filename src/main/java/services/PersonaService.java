@@ -1,12 +1,12 @@
 package services;
 
 import java.util.Optional;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import antlr.collections.List;
 import entities.Persona;
 import repositories.PersonaRepository;
 
@@ -44,7 +44,7 @@ public class PersonaService implements BaseService<Persona>{
 
 	@Override
 	@Transactional
-	public Persona save(Persona entitiy) throws Exception {
+	public Persona save(Persona entity) throws Exception {
 		try {
 			entity = personaRepository.save(entity);
 			return entity;
